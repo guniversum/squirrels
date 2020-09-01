@@ -1,2 +1,3 @@
 # squirrels
-First HTML and CSS page
+My first HTML and CSS page!
+https://guniversum.github.io/squirrels/
