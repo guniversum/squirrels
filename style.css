@@ -44,7 +44,7 @@ nav {
   background-color: rgb(167, 104, 75);
   position: sticky;
   margin: 0 auto;
-  top: 8.1vh;
+  top: 7vh;
   z-index: 1;
 }
 nav li {
