@@ -32,7 +32,7 @@ header {
   width: 100%;
   object-fit: cover;
   max-height: 80vh;
-  margin-top: 8vh;
+  margin-top: 5vh;
 }
 .main-nav {
   display: flex;
@@ -44,7 +44,7 @@ nav {
   background-color: rgb(167, 104, 75);
   position: sticky;
   margin: 0 auto;
-  top: 7vh;
+  top: 5vh;
   z-index: 1;
 }
 nav li {
