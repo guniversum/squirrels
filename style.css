@@ -5,23 +5,20 @@ body {
   font-family: "Lexend Peta", sans-serif;
   background-color: rgb(248, 241, 233);
 }
-/* Global header, banner, navigation and footer */
-
+/* Global header and banner*/
 header {
   background-color: rgb(88, 51, 35);
   text-align: center;
-  font-size: 50%;
+  font-size: 45%;
   color: white;
   padding: 1.5vh;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
-
 .banner h2 {
   color: rgb(73, 40, 26);
   position: absolute;
-  font-size: 2vw;
   left: 20%;
   top: 30%;
 }
@@ -32,7 +29,7 @@ header {
   width: 100%;
   object-fit: cover;
   max-height: 80vh;
-  margin-top: 8vh;
+  margin-top: 6vh;
 }
 .main-nav {
   display: flex;
@@ -40,11 +37,12 @@ header {
   justify-content: center;
   font-size: 85%;
 }
+/* Global navigation bar and footer */
 nav {
   background-color: rgb(167, 104, 75);
   position: sticky;
   margin: 0 auto;
-  top: 8.1vh;
+  top: 6.7vh;
   z-index: 1;
 }
 nav li {
@@ -66,22 +64,21 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  font-size: 1.6vh;
+  font-size: 0.8rem;
 }
 footer img {
   height: 8%;
   width: 8%;
   margin: auto;
-  padding: 1vh;
 }
 
 /* Index Page */
-
-h3 {
+.h3-prophets {
   text-align: center;
   padding: 5vh 5vw;
   margin-top: 10vh;
 }
+
 .box-prophets {
   display: flex;
   flex-flow: row wrap;
@@ -96,7 +93,6 @@ h3 {
   border-radius: 50%;
 }
 .portrait-li {
-  list-style: none;
   text-align: center;
 }
 .portrait:hover {
@@ -105,81 +101,156 @@ h3 {
 }
 
 /* Citat */
-
 .citat {
-  font-size: 100%;
   font-style: italic;
-  letter-spacing: -1px;
-  color: rgb(0, 0, 0);
-  margin: 20vh 20vw;
-  text-align: left;
+  letter-spacing: -0.1rem;
+  color: rgb(248, 241, 233);
+  margin: 15vh 20vw;
+  background-color: rgb(88, 51, 35);
+  padding: 10px 30px;
 }
 .citat a {
-  color: rgb(0, 0, 0);
-  font-style: normal;
-  font-size: 80%;
+  color: rgb(248, 241, 233);
+  font-size: 0.8rem;
   margin: 1vh 1vw;
+  text-decoration: underline;
 }
 
 /* About Page */
-
 .about-text h2 {
   text-align: center;
-  margin: 12vh;
+  margin: 12vh 4vw;
 }
 .about-text {
   text-align: left;
-  margin: 10vh 15vw;
+  margin: 1vh 15vw;
   letter-spacing: -1px;
 }
 h4 {
-  margin-bottom: 22vh;
+  margin-bottom: 18vh;
 }
 h4 a {
   color: black;
 }
+h4 a:hover {
+  text-decoration: underline;
+}
 .join {
   background-color: rgb(88, 51, 35);
-  color: white;
+  padding-bottom: 10vh;
   text-align: center;
 }
 .join h2 {
   color: white;
-  background-color: rgb(167, 101, 76);
+  background-color: rgb(167, 104, 75);
   display: inline-block;
   padding: 1.2vh;
-  margin: 9vh;
+  margin: 8vh 0 5vh 0;
 }
-form input {
-  margin: 0.5vh 10vw;
-  border-radius: 30px;
-  border: 10px solid white;
-  color: rgb(0, 0, 0);
+.container {
+  background-color: rgb(167, 104, 75);
+  width: 40vw;
+  overflow: hidden;
+  margin: auto;
+  padding: 30px;
+  text-align: left;
+}
+
+.form {
+  padding: 30px 40px;
+  margin: 0;
   background-color: white;
-  font-family: "Lexend Peta", sans-serif;
 }
-.submit {
-  background-color: rgb(167, 101, 76);
-  margin: 0.5vh 10vw;
-  border-radius: 30px;
-  border: 12px solid rgb(167, 101, 76);
+::placeholder {
+  color: rgb(182, 182, 182);
+  font-size: 0.8rem;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.form-control input {
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: inherit;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-control input:focus {
+  outline: 0;
+  border-color: rgb(143, 143, 143);
+}
+.form-control.success input {
+  border-color: rgb(26, 175, 88);
+}
+.form-control.error input {
+  border-color: rgb(189, 18, 41);
+}
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.form-control.success i.fa-check-circle {
+  color: rgb(44, 138, 57);
+  visibility: visible;
+}
+.form-control.error i.fa-exclamation-circle {
+  color: rgb(189, 18, 41);
+  visibility: visible;
+}
+
+.form-control small {
+  color: rgb(189, 18, 41);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+  font-size: 0.7rem;
+}
+.form button {
+  background-color: rgb(88, 51, 35);
+  border-style: none;
   color: white;
-  font-size: 1.8vh;
-  font-family: "Lexend Peta", sans-serif;
-  margin-top: 4vh;
-  margin-bottom: 15vh;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  padding: 10px;
+  width: 100%;
 }
-.submit:hover {
-  cursor: pointer;
-  font-family: "Lexend Peta", sans-serif;
+.form button:hover {
   transition: all 0.2s ease-in-out;
-  transform: scale(1.2);
-  border: 12px solid rgb(185, 118, 93);
-  background-color: rgb(185, 118, 93);
+  transform: scale(1.1);
+  background: linear-gradient(#834535, #583323);
+}
+.thanks {
+  text-align: center;
+  margin-top: 25px;
+  color: rgb(88, 51, 35);
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 /* Media Queries */
-
+@media only screen and (max-height: 800px) {
+  nav {
+    top: 7vh;
+  }
+  .banner img {
+    margin-top: 7vh;
+  }
+}
 @media only screen and (max-height: 650px) {
   nav {
     top: 9vh;
@@ -193,5 +264,67 @@ form input {
 @media only screen and (max-height: 400px) {
   nav {
     top: 13vh;
+  }
+}
+
+/* Media Queries iPads */
+@media only screen and (max-width: 1050px) {
+  nav {
+    top: 5vh;
+  }
+  .banner img {
+    margin-top: 5vh;
+  }
+  .container {
+    width: 60vw;
+    overflow: hidden;
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Media Queries iPhone X */
+@media only screen and (max-width: 500px) {
+  nav {
+    top: 7vh;
+  }
+  nav ul {
+    padding-left: 0;
+  }
+  nav li {
+    display: block;
+    font-size: 1rem;
+  }
+  .banner h2 {
+    left: 12%;
+    top: 20%;
+    font-size: 90%;
+  }
+  .banner img {
+    margin-top: 8vh;
+  }
+  .container {
+    width: 95vw;
+    overflow: hidden;
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+}
+/* Media Queries Galaxy Fold */
+@media only screen and (max-width: 300px) {
+  nav {
+    top: 10vh;
+  }
+
+  .banner h2 {
+    left: 12%;
+    top: 20%;
+    font-size: 70%;
+  }
+  .container {
+    width: 95vw;
+    overflow: hidden;
+    padding: 5px;
+    font-size: 0.9rem;
   }
 }
